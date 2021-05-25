@@ -11,33 +11,45 @@ class: center, middle
 Gaurav Agarwal
 
 ---
+class: center, middle
 
-# Agenda
+Rust is a compiled language. Every program needs to be compiled before it can be run!
+
+---
+
+Looking at `scratchpad`
+
+---
+
+## Running & Building
+
+- `rustc`
+
+  - For compiling, a `.rs` to a binary
+
+- `cargo`
+
+  - For managing, rust projects. eg: `cargo build`, `cargo run`
 
 ---
 
 class: center, middle
 
-![Me](assets/images/me.png)
-
-Software Engineer & Product Developer
-
-Director of Engineering & Founder @ https://codermana.com
-
-ex-Tarka Labs, ex-BrowserStack, ex-ThoughtWorks
+## Naming Conventions
 
 ---
-class: center, middle
 
-```golang
-package main
+- functions, variables (let), modules & filenames
 
-import "fmt"
+  `snake_case`
 
-func main() {
-  fmt.Println("Hello, world!")
-}
-```
+- constants
+
+  `SCREAMING_SNAKE_CASE`
+
+- Enums, Structs, Traits
+
+  `PascalCase` or `UpperCamelCase`
 
 ---
 
