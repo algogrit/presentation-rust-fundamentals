@@ -43,7 +43,7 @@ class: center, middle
 
 ---
 
-- functions, variables (let), modules & filenames
+- functions, variables (let), modules & filenames, methods
 
   `snake_case`
 
@@ -453,11 +453,78 @@ Some of the common problems avoided by Rust's ownership and borrowing:
 - Index out of bound (slices)
 
 ---
+class: center, middle
+
+## Compound Data Type: `struct`
+
+---
+class: center, middle
+
+Created using `struct` keyword
+
+---
+
+- Like ruby, if variable name and field names are same, the field name can be avoided during initialization
+- Use `struct update syntax`, to create a new struct using some fields of old struct
+- Structs can also be tuples
+- You can also create unit structs
+
+---
+class: center, middle
+
+### Ownership of Struct Data
+
+---
+class: center, middle
+
+### Debugging & Printing structs
+
+---
+
+- Printing requires implementing `Display` trait
+- Using the `Debug` trait, and deriving it:
+
+```rust
+#[derive(Debug)]
+```
+
+---
+
+- Can print using, `{:?}`
+
+- Or use: `{:#?}` for pretty printing
+
+---
+
+### Methods for `struct`
+
+- Defined using the `impl` block
+
+- Should take `self` or `&self` reference as first arg
+
+- Methods can take more than one arg
+
+---
+
+### Associated functions
+
+- `impl` blocks can define other associated functions as well
+
+- Eg. `String::from`
+
+- Typical usage is for creating constructors (`new` is the convention)
+
+---
+class: center, middle
+
+You can define multiple `impl` blocks
+
+---
 
 class: center, middle
 
 Code
-https://github.com/algogrit/presentation-rust-fundamentals
+https://github.com/AgarwalConsulting/Rust-Training
 
 Slides
 https://rust-fundamentals.slides.algogrit.com
