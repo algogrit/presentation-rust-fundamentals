@@ -202,6 +202,80 @@ class: center, middle
 - constants cannot be shadowed!
 
 ---
+class: center, middle
+
+## Functions
+
+---
+
+### Passing arguments
+
+```rust
+fn main() {
+  add(10, 20);
+}
+
+fn add(x: i32, y: i32) {
+  println!("{}", x + y);
+}
+```
+
+---
+
+### Returning values
+
+```rust
+fn five() {
+  return 5
+}
+```
+
+- `return` is optional
+
+---
+class: center, middle
+
+## Control Flow
+
+---
+
+### `if`
+
+- Similar to `if ... else` in many other languages
+- Can be used for assignment
+
+---
+class: center, middle
+
+### Repetition with loops
+
+---
+class: center, middle
+
+Rust has three kinds of loops: `loop`, `while`, and `for`.
+
+---
+
+#### `loop`
+
+- You can `loop` forever in rust
+- Control execution using `break` & `continue`
+- Usually used as a retry mechanism
+- Also useful for assignment as well
+
+---
+
+#### `while`
+
+- Normal
+
+---
+
+#### `for`
+
+- Can only be used as `for <el> in <iter>` format
+
+---
 
 class: center, middle
 
