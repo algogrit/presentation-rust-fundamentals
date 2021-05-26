@@ -15,7 +15,7 @@ class: center, middle
 
 ![The Rust Book](assets/images/rust-book.jpg)
 
-.content-credits(https://doc.rust-lang.org/book/title-page.html)
+.content-credits[https://doc.rust-lang.org/book/title-page.html]
 
 ---
 
