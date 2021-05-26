@@ -908,6 +908,7 @@ class: center, middle
 ### Coherence (Orphan Rule)
 
 ---
+class: center, middle
 
 Trait can be implemented by structs in different modules too!
 
