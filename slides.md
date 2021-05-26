@@ -1014,6 +1014,86 @@ Some code in rust, using references, can be compiled without lifetime annotation
 - For methods: If there is `&self` or `&mut self` input param then that lifetime is assigned to all the outputs
 
 ---
+class: center, middle
+
+## Testing
+
+---
+class: center, middle
+
+"Program testing can be a very effective way to show the presence of bugs, but it is hopelessly inadequate for showing their absence."
+
+.content-credits[1972 essay “The Humble Programmer,” Edsger W. Dijkstra]
+
+---
+
+- Unit tests need to be defined in the same file as the Source code.
+
+- Integration tests can be defined in the `/tests` directory.
+
+- Rust also has doc tests.
+
+---
+class: center, middle
+
+### Unit tests
+
+---
+
+- Need to have `#[cfg(test)]` before module
+
+- Need to have `#[test]` before test case
+
+- Can ignore test with `#[ignore]`
+
+---
+
+- Assertions: all macros!
+  - assert_eq!
+  - assert!
+
+- Tests can fail, due to panics!
+
+- Panics can be tested using `#[should_panic]`
+
+- Can import `private` & `public` code from `super` module using `use super::*`
+
+---
+class: center, middle
+
+### Integration tests
+
+---
+class: center, middle
+
+Can test only public API
+
+---
+class: center, middle
+
+## Doc tests
+
+---
+class: center, middle
+
+Defined using `///`
+
+---
+class: center, middle
+
+### Running tests with `cargo test`
+
+---
+
+- Parallel tests by default: `--test-threads=1`
+
+- Output of passing test: `--show-output`
+
+- Run subset by name: `cargo test <subset-name>`
+
+- Run ignored tests: `--ignored`
+
+---
 
 class: center, middle
 
