@@ -13,6 +13,14 @@ Gaurav Agarwal
 ---
 class: center, middle
 
+![The Rust Book](assets/images/rust-book.jpg)
+
+.content-credits(https://doc.rust-lang.org/book/title-page.html)
+
+---
+
+class: center, middle
+
 Rust is a compiled language. Every program needs to be compiled before it can be run!
 
 ---
@@ -84,6 +92,8 @@ class: center, middle
 
 #### Scalar
 
+integers, floats, boolean, character
+
 ---
 
 ##### Integers
@@ -120,6 +130,8 @@ class: center, middle
 class: center, middle
 
 #### Compound
+
+tuple, array
 
 ---
 
