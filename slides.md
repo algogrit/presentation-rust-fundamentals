@@ -534,6 +534,77 @@ class: center, middle
 You can define multiple `impl` blocks
 
 ---
+class: center, middle
+
+## Enums
+
+---
+class: center, middle
+
+Similar to algebraic data types in ML family of languages
+
+---
+
+- Defined using `enum` keyword
+
+Eg:
+
+```rust
+enum Action {
+  Jump(i32)
+  Stop
+  Turn(Direction)
+  Walk
+}
+```
+
+- Methods can be defined on `enums` as well, similar to `struct` using `impl`
+
+---
+class: center, middle
+
+### Common Enums
+
+---
+class: center, middle
+
+#### `Option<T>` (`std::option::Option`)
+
+---
+
+- Two variants: `Some<T>` and `None`
+
+- Rust also doesn't have `nil` or `null`!
+
+- Instead it relies on the `Option` enum in the standard library
+
+---
+class: center, middle
+
+#### Result<T, Err>
+
+---
+class: center, middle
+
+### Pattern matching
+
+---
+
+- Use `match`
+
+- `match` is exhaustive
+
+- You can use `_` (underscore), as a catch all "match arm"
+
+- You can use `()` as a do nothing, `noop`!
+
+---
+
+- `if let` is a more concise way to perform the same things as above!
+
+- can also have `else` & `else if let` blocks
+
+---
 
 class: center, middle
 
