@@ -81,13 +81,8 @@ class: center, middle
 - Type can be inferred
 - Allows shadowing!
 - Types classification:
-
   - Scalar
-    - integers, floating-point numbers, Booleans, and characters
-
   - Compound
-    - Compound types can group multiple values into one type.
-    - Rust has two primitive compound types: tuples and arrays.
 
 ---
 class: center, middle
@@ -134,6 +129,11 @@ class: center, middle
 #### Compound
 
 tuple, array
+
+---
+class: center, middle
+
+Compound types can group multiple values into one type.
 
 ---
 
