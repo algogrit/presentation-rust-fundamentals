@@ -671,6 +671,128 @@ Related keywords: `mod`, `pub`, `use`, `as`
 - `as`: Is used to aliasing an import
 
 ---
+class: center, middle
+
+## Collections in std library
+
+---
+
+- Have different behavior cause of Heap allocations
+
+- A rust programmer will need to understand ownership better before writing any meaningful applications
+
+---
+
+Rust’s collections (`std::collections`) can be grouped into four major categories:
+
+- Sequences: `Vec`, `VecDeque`, `LinkedList`
+- Maps: `HashMap`, `BTreeMap`
+- Sets: `HashSet`, `BTreeSet`
+- Misc: `BinaryHeap`
+
+.content-credits[https://doc.rust-lang.org/std/collections/index.html]
+
+---
+
+We’ll discuss three collections that are used very often in Rust programs:
+
+- A vector allows you to store a variable number of values next to each other.
+- A string is a collection of characters. We’ve mentioned the String type previously, but in this chapter we’ll talk about it in depth.
+- A hash map allows you to associate a value with a particular key. It’s a particular implementation of the more general data structure called a map.
+
+---
+class: center, middle
+
+### Vectors
+
+---
+
+A contiguous growable array type, written as `Vec<T>` and pronounced ‘vector’.
+
+- Creating a vector:
+  - `Vec::new()`
+  - `vec!()` macro
+
+- Updating a vector:
+  - `v.push(5)`
+
+- Dropping a Vector Drops Its Elements
+
+- Reading Elements of Vectors
+  - Indexing: `v[n]`
+  - get method: `v.get(n)`
+
+- Iterating over the Values in a Vector
+  - `for _ in _`
+
+- Using an Enum to Store Multiple Types
+
+---
+class: center, middle
+
+### String
+
+A String is a wrapper over a `Vec<u8>`.
+
+---
+class: center, middle
+
+Trying with “नमस्ते” or "Здравствуйте"!
+
+---
+class: center, middle
+
+Slicing Strings: What are we slicing exactly? bytes!
+
+---
+class: center, middle
+
+Iterating Over Strings
+
+---
+class: center, middle
+
+### HashMap
+
+---
+
+- `use std::collections::HashMap;`
+
+- `HashMap::new();`
+
+- Inserting into the HashMap
+  - `insert` method
+
+- Another way of constructing a hash map is by using iterators and the collect method on a vector of tuples, where each tuple consists of a key and its value.
+
+- Accessing Values in a Hash Map
+  - `get` method
+
+- Updating a Hash Map
+  - Overwriting a Value: `insert` methods
+  - Inserting if there is no value: `entry` & `or_insert` methods
+  - Updating values via mutable references
+
+---
+class: center, middle
+
+#### Hash Maps and Ownership
+
+---
+class: center, middle
+
+For types that implement the `Copy` trait, like `i32`, the values are copied into the hash map. For owned values like `String`, the values will be moved and the hash map will be the owner of those values.
+
+---
+class: center, middle
+
+### Hashing Functions
+
+HashMap uses a hashing function called SipHash that can provide resistance to Denial of Service (DoS) attacks involving hash tables.
+
+.content-credits[https://en.wikipedia.org/wiki/SipHash]
+
+---
 
 class: center, middle
 
