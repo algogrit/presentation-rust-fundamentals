@@ -742,7 +742,12 @@ Trying with “नमस्ते” or "Здравствуйте"!
 ---
 class: center, middle
 
-Slicing Strings: What are we slicing exactly? bytes!
+Slicing Strings: What are we slicing exactly?
+
+---
+class: center, middle
+
+bytes!
 
 ---
 class: center, middle
