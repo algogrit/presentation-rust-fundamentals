@@ -798,6 +798,66 @@ HashMap uses a hashing function called SipHash that can provide resistance to De
 .content-credits[https://en.wikipedia.org/wiki/SipHash]
 
 ---
+class: center, middle
+
+## Errors & panics
+
+---
+
+Two options in Rust:
+
+- `panic!`
+  - No recovery
+
+- `Result<T, E>`
+  - Variants: `Ok(T)`, `Err(E)`
+
+---
+class: center, middle
+
+### Panic
+
+---
+class: center, middle
+
+Can get backtrace using: `RUST_BACKTRACE=1` env variable.
+
+---
+
+#### Turn off unwinding
+
+```toml
+[profile.release]
+panic = 'abort'
+```
+
+---
+class: center, middle
+
+### Result<T, E>
+
+---
+
+Use `match`
+
+- match on different errors using `kind` method
+
+---
+
+Use methods like
+
+- `unwrap_or_else` <- allows err handling
+- `unwrap` <- panic
+- `expect` <- panic with custom message
+
+---
+
+Propagating errors
+
+- `?` <- can return even from main
+- Return type: `Result<(), Box<dyn Error>>`
+
+---
 
 class: center, middle
 
