@@ -673,6 +673,53 @@ Related keywords: `mod`, `pub`, `use`, `as`
 ---
 class: center, middle
 
+### Customizing builds with release profiles
+
+---
+
+Cargo has two main profiles:
+
+- "dev" profile Cargo uses when you run `cargo build`
+- "release" profile Cargo uses when you run `cargo build --release`
+
+The dev profile is defined with good defaults for development, and the release profile has good defaults for release builds.
+
+---
+
+The opt-level setting controls the number of optimizations Rust will apply to your code, with a range of 0 to 3.
+
+```toml
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+```
+
+---
+class: center, middle
+
+### Workspaces
+
+---
+
+Created manually!
+
+```bash
+cat Cargo.toml
+```
+
+```toml
+[workspace]
+
+members = [
+    "<crate names>",
+]
+```
+
+---
+class: center, middle
+
 ## Collections in std library
 
 ---
