@@ -80,12 +80,12 @@ class: center, middle
 - Strongly typed
 - Type can be inferred
 - Allows shadowing!
-- Enum for Errors (`Result{ Ok<T>, Err }`)
-  - `match` keyword
 - Types classification:
-  - Scalar - integers, floating-point numbers, Booleans, and characters
+  - Scalar
+    - integers, floating-point numbers, Booleans, and characters
   - Compound
-    - Compound types can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.
+    - Compound types can group multiple values into one type.
+    - Rust has two primitive compound types: tuples and arrays.
 
 ---
 class: center, middle
