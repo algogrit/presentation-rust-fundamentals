@@ -983,7 +983,35 @@ class: center, middle
 
 - Using trait bounds you can also have a "selective" generic implementation
 
-- We will discuss trait objects later
+---
+class: center, middle
+
+#### Trait Objects
+
+---
+class: center, middle
+
+Trait Objects allow dynamic dispatching or runtime polymorphism.
+
+---
+class: center, middle
+
+A Trait Object usually takes the form: `Box<dyn {trait-name}>`
+
+---
+class: center, middle
+
+##### Object Safety Is Required for Trait Objects
+
+You can only make object-safe traits into trait objects.
+
+---
+
+A trait is object safe if all the methods defined in the trait have the following properties:
+
+- The return type isn’t `Self`.
+
+- There are no generic type parameters.
 
 ---
 class: center, middle
@@ -1358,6 +1386,123 @@ class: center, middle
 #### A common way to use `RefCell<T>` is in combination with `Rc<T>`
 
 Recall that `Rc<T>` lets you have multiple owners of some data, but it only gives immutable access to that data. If you have an `Rc<T>` that holds a `RefCell<T>`, you can get a value that can have multiple owners and that you can mutate!
+
+---
+class: center, middle
+
+## Concurrency
+
+---
+
+Threads can run simultaneously, there’s no inherent guarantee about the order in which parts of your code on different threads will run. This can lead to problems, such as:
+
+- Race conditions, where threads are accessing data or resources in an inconsistent order
+
+- Deadlocks, where two threads are waiting for each other to finish using a resource the other thread has, preventing both threads from continuing
+
+- Bugs that happen only in certain situations and are hard to reproduce and fix reliably
+
+---
+class: center, middle
+
+Rust calls the operating system APIs to create threads, which is sometimes called 1:1, meaning one operating system thread per one language thread.
+
+---
+class: center, middle
+
+### Using Message Passing to Transfer Data Between Threads
+
+---
+class: center, middle
+
+"Do not communicate by sharing memory; instead, share memory by communicating."
+
+.content-credits[Go concurrency slogan]
+
+---
+class: center, middle
+
+One major tool Rust has for accomplishing message-sending concurrency is the channel, a programming concept that Rust’s standard library provides an implementation of.
+
+---
+
+- A channel in programming has two halves: a transmitter and a receiver.
+
+- Channel is defined in `std::sync::mpsc`.
+
+---
+
+- "MPSC" stands for Multiple producer, single consumer.
+
+- Created using: `let (tx, rx) = mpsc::channel();`
+
+---
+
+#### Usage
+
+- `tx.send`
+- `tx.clone`
+- `rx.recv`
+
+---
+class: center, middle
+
+### Shared-State Concurrency
+
+---
+class: center, middle
+
+Using Mutexes to Allow Access to Data from One Thread at a Time
+
+---
+
+### The API of Mutex<T>
+
+- In `std::sync::Mutex`
+
+- `Mutex::new`
+
+- `m.lock`
+
+---
+class: center, middle
+
+#### How to share a mutex between multiple threads?
+
+---
+
+- `Arc<T>` is a type like `Rc<T>` that is safe to use in concurrent situations.
+
+- The "a" stands for atomic, meaning it’s an *atomically reference counted* type.
+
+- Rust std lib also has support for atomic operations in `std::sync::atomic`.
+
+---
+class: center, middle
+
+#### Extending Rust concurrency
+
+---
+
+- You can write your own concurrency features or use those written by others.
+
+- Two concurrency concepts are embedded in the language: the `std::marker` traits `Sync` and `Send`.
+
+---
+
+- The `Send` marker trait indicates that ownership of values of the type implementing `Send` can be transferred between threads.
+
+- The `Sync` marker trait indicates that it is safe for the type implementing `Sync` to be referenced from multiple threads.
+
+---
+
+- Because types that are made up of `Send` and `Sync` traits are automatically also `Send` and `Sync`, we don’t have to implement those traits manually.
+
+- As marker traits, they don’t even have any methods to implement. They’re just useful for enforcing invariants related to concurrency.
+
+---
+
+## Demo: Writing a low-level HTTP server is Rust
 
 ---
 
