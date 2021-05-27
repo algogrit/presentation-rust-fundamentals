@@ -1014,7 +1014,7 @@ class: center, middle
 ---
 class: center, middle
 
-Similar to generics.
+Similar to generics
 
 ---
 
