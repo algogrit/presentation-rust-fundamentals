@@ -1353,6 +1353,7 @@ class: center, middle
 Static analysis, like the Rust compiler, is inherently conservative. Some properties of code are impossible to detect by analyzing the code: the most famous example is the Halting Problem.
 
 ---
+class: center, middle
 
 #### A common way to use `RefCell<T>` is in combination with `Rc<T>`
 
