@@ -1191,11 +1191,13 @@ Rust "borrows" a lot of concepts from functional programming languages.
 
 - `Fn` traits are inferred by the compiler automatically
 
-  - `FnOnce`: Moves & the closure can be invoked just once.
+  - `FnOnce`: Moves & the closure can be invoked at least once.
 
   - `FnMut`: Borrows mutably
 
   - `Fn`: Borrows immutably
+
+.content-credits[https://stackoverflow.com/questions/30177395/when-does-a-closure-implement-fn-fnmut-and-fnonce]
 
 ---
 class: center, middle
