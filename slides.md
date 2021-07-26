@@ -1503,6 +1503,7 @@ class: center, middle
 - As marker traits, they don’t even have any methods to implement. They’re just useful for enforcing invariants related to concurrency.
 
 ---
+class: center, middle
 
 ## Demo: Writing a low-level HTTP server is Rust
 
