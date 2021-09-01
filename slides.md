@@ -424,7 +424,7 @@ References can be mutable too!
 ---
 class: center, middle
 
-Mutable references have one big restriction: you can have only one mutable reference to a particular piece of data in a particular scope. This code will fail:
+Mutable references have one big restriction: you can have only one mutable reference to a particular piece of data in a particular scope.
 
 ---
 
