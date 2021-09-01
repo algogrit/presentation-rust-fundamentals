@@ -240,7 +240,7 @@ fn add(x: i32, y: i32) {
 ### Returning values
 
 ```rust
-fn five() {
+fn five() -> i32 {
   return 5
 }
 ```
