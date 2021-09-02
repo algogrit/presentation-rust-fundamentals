@@ -563,6 +563,27 @@ enum Action {
 ---
 class: center, middle
 
+### Pattern matching
+
+---
+
+- Use `match`
+
+- `match` is exhaustive
+
+- You can use `_` (underscore), as a catch all "match arm"
+
+- You can use `()` as a do nothing, `noop`!
+
+---
+
+- `if let` is a more concise way to perform the same things as above!
+
+- can also have `else` & `else if let` blocks
+
+---
+class: center, middle
+
 ### Common Enums
 
 ---
@@ -582,27 +603,6 @@ class: center, middle
 class: center, middle
 
 #### Result<T, Err>
-
----
-class: center, middle
-
-### Pattern matching
-
----
-
-- Use `match`
-
-- `match` is exhaustive
-
-- You can use `_` (underscore), as a catch all "match arm"
-
-- You can use `()` as a do nothing, `noop`!
-
----
-
-- `if let` is a more concise way to perform the same things as above!
-
-- can also have `else` & `else if let` blocks
 
 ---
 class: center, middle
