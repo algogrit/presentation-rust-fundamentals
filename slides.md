@@ -871,7 +871,7 @@ Can get backtrace using: `RUST_BACKTRACE=1` env variable.
 
 ---
 
-#### Turn off unwinding
+#### Turn off [unwinding](https://doc.rust-lang.org/nomicon/unwinding.html)
 
 ```toml
 [profile.release]
