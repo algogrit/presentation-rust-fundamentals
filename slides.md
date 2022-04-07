@@ -777,6 +777,11 @@ A contiguous growable array type, written as `Vec<T>` and pronounced â€˜vectorâ€
 ---
 class: center, middle
 
+`get` vs `get_mut`
+
+---
+class: center, middle
+
 ### String
 
 A String is a wrapper over a `Vec<u8>`.
