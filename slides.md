@@ -784,7 +784,7 @@ class: center, middle
 
 ### String
 
-A String is a wrapper over a `Vec<u8>`.
+`String` is a wrapper over a `Vec<u8>`.<sup>`*`</sup>
 
 ---
 class: center, middle
@@ -805,6 +805,15 @@ bytes!
 class: center, middle
 
 Iterating Over Strings
+
+---
+class: center, middle
+
+<sup>`*`</sup> There are many other string types in rust!
+
+![Rust Strings](assets/images/rust-strings.png)
+
+.content-credits[https://www.youtube.com/watch?v=CpvzeyzgQdw]
 
 ---
 class: center, middle
