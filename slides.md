@@ -611,6 +611,8 @@ class: center, middle
 
 #### `Option<T>` (`std::option::Option`)
 
+.content-credits[https://doc.rust-lang.org/stable/std/option/#Option]
+
 ---
 
 - Two variants: `Some<T>` and `None`
