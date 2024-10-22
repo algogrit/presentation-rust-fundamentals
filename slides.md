@@ -1004,6 +1004,13 @@ You can either
 ---
 class: center, middle
 
+### Display trait
+
+.content-credits[https://doc.rust-lang.org/std/fmt/trait.Display.html]
+
+---
+class: center, middle
+
 ### From / Into traits
 
 .content-credits[https://doc.rust-lang.org/rust-by-example/conversion/from_into.html]
