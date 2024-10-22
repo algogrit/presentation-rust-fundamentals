@@ -204,6 +204,16 @@ The array named a will contain 5 elements that will all be set to the value 3 in
 ---
 class: center, middle
 
+### Type Conversion using `as`
+
+---
+class: center, middle
+
+### Parsing strings using `.parse`
+
+---
+class: center, middle
+
 What happens if you try to access an element of an array that is past the end of the array?
 
 ---
@@ -532,6 +542,16 @@ class: center, middle
 class: center, middle
 
 You can define multiple `impl` blocks
+
+---
+class: center, middle
+
+### Tuple Structs
+
+---
+class: center, middle
+
+### Unit Structs
 
 ---
 class: center, middle
@@ -980,6 +1000,20 @@ You can either
 - implement a trait from same module for an external type
 
 - implement an external trait for type from same module
+
+---
+class: center, middle
+
+### From / Into traits
+
+.content-credits[https://doc.rust-lang.org/rust-by-example/conversion/from_into.html]
+
+---
+class: center, middle
+
+### Marker traits
+
+.content-credits[https://doc.rust-lang.org/stable/std/marker/]
 
 ---
 class: center, middle
