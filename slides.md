@@ -1449,6 +1449,11 @@ Recall that `Rc<T>` lets you have multiple owners of some data, but it only give
 ---
 class: center, middle
 
+`Rc<RefCell<T>>` vs `Arc<Mutex<T>>`
+
+---
+class: center, middle
+
 ## Concurrency
 
 ---
