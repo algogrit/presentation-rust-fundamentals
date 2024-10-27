@@ -1013,6 +1013,13 @@ class: center, middle
 ---
 class: center, middle
 
+### Default trait
+
+.content-credits[https://doc.rust-lang.org/std/default/trait.Default.html]
+
+---
+class: center, middle
+
 ### From / Into traits
 
 .content-credits[https://doc.rust-lang.org/rust-by-example/conversion/from_into.html]
@@ -1558,6 +1565,8 @@ class: center, middle
 
 - The `Sync` marker trait indicates that it is safe for the type implementing `Sync` to be referenced from multiple threads.
 
+.content-credits[https://doc.rust-lang.org/nomicon/send-and-sync.html]
+
 ---
 
 - Because types that are made up of `Send` and `Sync` traits are automatically also `Send` and `Sync`, we don’t have to implement those traits manually.
@@ -1567,9 +1576,26 @@ class: center, middle
 ---
 class: center, middle
 
-## `async/await` using Tokio Runtime
+## `async/await`
+
+.content-credits[https://rust-lang.github.io/async-book/01_getting_started/02_why_async.html]
+
+---
+class: center, middle
+
+## `async/await` via Tokio runtime
 
 .content-credits[https://tokio-runtime.slides.algogrit.com]
+
+---
+class: center, middle
+
+asynchronous programming is not better than threads, but different
+
+---
+class: center, middle
+
+If you don't need async for performance reasons, threads can often be the simpler alternative.
 
 ---
 
