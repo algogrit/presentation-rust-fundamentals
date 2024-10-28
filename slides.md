@@ -1408,13 +1408,16 @@ Rust has a type called `Rc<T>`, which is an abbreviation for reference counting,
 
 ---
 
-#### Usage
-
 - `Rc::new`
+
 - `Rc::strong_count`
+
 - `Rc::clone`
+
 - `Rc::downgrade`
+
 - `Rc::weak_count`
+
 - `.upgrade`
 
 ---
@@ -1481,43 +1484,6 @@ Rust calls the operating system APIs to create threads, which is sometimes calle
 ---
 class: center, middle
 
-### Using Message Passing to Transfer Data Between Threads
-
----
-class: center, middle
-
-"Do not communicate by sharing memory; instead, share memory by communicating."
-
-.content-credits[Go concurrency slogan]
-
----
-class: center, middle
-
-One major tool Rust has for accomplishing message-sending concurrency is the channel, a programming concept that Rust’s standard library provides an implementation of.
-
----
-
-- A channel in programming has two halves: a transmitter and a receiver.
-
-- Channel is defined in `std::sync::mpsc`.
-
----
-
-- "MPSC" stands for Multiple producer, single consumer.
-
-- Created using: `let (tx, rx) = mpsc::channel();`
-
----
-
-#### Usage
-
-- `tx.send`
-- `tx.clone`
-- `rx.recv`
-
----
-class: center, middle
-
 ### Shared-State Concurrency
 
 ---
@@ -1572,6 +1538,43 @@ class: center, middle
 - Because types that are made up of `Send` and `Sync` traits are automatically also `Send` and `Sync`, we don’t have to implement those traits manually.
 
 - As marker traits, they don’t even have any methods to implement. They’re just useful for enforcing invariants related to concurrency.
+
+---
+class: center, middle
+
+### Using Message Passing to Transfer Data Between Threads
+
+---
+class: center, middle
+
+"Do not communicate by sharing memory; instead, share memory by communicating."
+
+.content-credits[Go concurrency slogan]
+
+---
+class: center, middle
+
+One major tool Rust has for accomplishing message-sending concurrency is the channel, a programming concept that Rust’s standard library provides an implementation of.
+
+---
+
+- A channel in programming has two halves: a transmitter and a receiver.
+
+- Channel is defined in `std::sync::mpsc`.
+
+---
+
+- "MPSC" stands for Multiple producer, single consumer.
+
+- Created using: `let (tx, rx) = mpsc::channel();`
+
+---
+
+- `tx.send`
+
+- `tx.clone`
+
+- `rx.recv`
 
 ---
 class: center, middle
