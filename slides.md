@@ -1599,6 +1599,16 @@ If you don't need async for performance reasons, threads can often be the simple
 
 ---
 
+### Other useful crates
+
+- [Serde](https://serde.rs/) - For **ser**ializing and **de**serializing
+
+- [Rayon](https://github.com/rayon-rs/rayon) - data-parallelism library
+
+- [Crossbeam](https://github.com/crossbeam-rs/crossbeam) - set of tools for concurrent programming
+
+---
+
 class: center, middle
 
 Code
